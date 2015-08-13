@@ -150,8 +150,7 @@ createEntity = (collection, id, timestamp, data, callback) ->
     Database.db.collection(collection).update
         _id: id
     ,
-        $set:
-            data
+        data
     ,
         upsert: true
     , (err) ->
