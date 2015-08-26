@@ -252,7 +252,7 @@ processSuccessTileResponse = (response, tiles, callback) ->
                 if t.tile.error is 'TIMEOUT'
 
                     Tile.data[t.id].status = STATUS_TIMEOUT
-                    timeoutTiles.push id
+                    timeoutTiles.push t.id
 
                 else
 
