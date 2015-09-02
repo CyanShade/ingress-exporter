@@ -92,6 +92,7 @@ pluginList.push plugin for pname, plugin of plugins
 # the terminate plugin
 pluginList.push
     onBootstrap: (callback) ->
+        Database.db.close()
         callback 'end'
 
 async.each pluginList, (plugin, callback) ->
